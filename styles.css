@@ -232,6 +232,42 @@ h5 { font-size: 1rem; }
     display: flex;
     gap: 16px;
     animation: slideInUp 0.8s ease-out 0.3s both;
+    margin-bottom: 32px;
+}
+
+.share-buttons {
+    animation: slideInUp 0.8s ease-out 0.4s both;
+    padding: 20px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+}
+
+.share-buttons p {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    opacity: 0.9;
+}
+
+.share-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: white;
+    color: var(--primary);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    margin: 0 6px 0 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.share-btn:hover {
+    transform: scale(1.15) translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .hero-image {
@@ -371,32 +407,104 @@ h5 { font-size: 1rem; }
     transform: translateX(4px);
 }
 
-/* ============ Portfolio Section ============ */
-.portfolio-section {
+/* ============ Testimonials Section ============ */
+.testimonials-section {
     padding: 100px 0;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
 }
 
-.portfolio-grid {
+.testimonials-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
 }
 
-.portfolio-item {
+.testimonial-card {
     background: white;
-    border-radius: 12px;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.stars {
+    color: #FFD700;
+    font-size: 1rem;
+    margin-bottom: 16px;
+    letter-spacing: 4px;
+}
+
+.testimonial-text {
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    font-style: italic;
+    border-left: 4px solid var(--primary);
+    padding-left: 16px;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.author-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.author-info h5 {
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+.author-info p {
+    color: var(--text-light);
+    font-size: 0.85rem;
+}
+
+/* ============ Blog Section ============ */
+.blog-section {
+    padding: 100px 0;
+    background: white;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+}
+
+.blog-card {
+    background: white;
+    border-radius: 16px;
     overflow: hidden;
     box-shadow: var(--shadow-md);
     transition: var(--transition);
     cursor: pointer;
 }
 
-.portfolio-item:hover {
+.blog-card:hover {
+    transform: translateY(-8px);
     box-shadow: var(--shadow-xl);
-    transform: translateY(-4px);
 }
 
-.portfolio-image {
+.blog-image {
     width: 100%;
     height: 200px;
     background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
@@ -404,62 +512,67 @@ h5 { font-size: 1rem; }
     align-items: center;
     justify-content: center;
     color: white;
-    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
 }
 
-.portfolio-item:hover .portfolio-image {
-    transform: scale(1.05);
-}
-
-.portfolio-item h4 {
-    padding: 20px 16px 8px;
-    color: var(--text);
-}
-
-.portfolio-item p {
-    padding: 0 16px 16px;
-    color: var(--text-light);
-    font-size: 0.9rem;
-}
-
-/* ============ Why Us Section ============ */
-.why-us-section {
-    padding: 100px 0;
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
-}
-
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 32px;
-}
-
-.feature {
-    text-align: center;
-    padding: 24px;
-    transition: var(--transition);
-}
-
-.feature-icon {
-    font-size: 3rem;
+.blog-category {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: white;
     color: var(--primary);
-    margin-bottom: 16px;
-    transition: var(--transition);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.feature:hover .feature-icon {
-    transform: scale(1.2) rotate(-10deg);
-    animation: bounce 0.6s ease-out;
-}
-
-.feature h4 {
+.blog-card h3 {
+    padding: 24px 24px 12px;
     color: var(--text);
-    margin-bottom: 12px;
+    font-size: 1.2rem;
+    line-height: 1.4;
 }
 
-.feature p {
+.blog-excerpt {
+    padding: 0 24px 16px;
     color: var(--text-light);
     font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.blog-meta {
+    padding: 0 24px 16px;
+    display: flex;
+    gap: 24px;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.blog-meta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.read-more {
+    display: block;
+    margin: 0 24px 24px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.read-more:hover {
+    transform: translateX(4px);
 }
 
 /* ============ Contact Section ============ */
@@ -810,6 +923,16 @@ h5 { font-size: 1rem; }
         justify-content: center;
     }
     
+    .share-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .share-btn {
+        margin: 6px;
+    }
+    
     .contact-wrapper {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -850,10 +973,15 @@ h5 { font-size: 1rem; }
     }
     
     .services-section,
-    .portfolio-section,
-    .why-us-section,
+    .testimonials-section,
+    .blog-section,
     .contact-section {
         padding: 60px 0;
+    }
+    
+    .testimonials-grid,
+    .blog-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -886,13 +1014,16 @@ h5 { font-size: 1rem; }
     }
     
     .services-grid,
-    .portfolio-grid,
+    .testimonials-grid,
+    .blog-grid,
     .features-grid {
         grid-template-columns: 1fr;
     }
     
     .service-card,
     .portfolio-item,
+    .testimonial-card,
+    .blog-card,
     .contact-card {
         padding: 24px 16px;
     }
@@ -903,5 +1034,10 @@ h5 { font-size: 1rem; }
     
     .modal-body {
         padding: 32px 20px;
+    }
+    
+    .blog-meta {
+        flex-direction: column;
+        gap: 12px;
     }
 }
