@@ -2,159 +2,340 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>G-Net Services | Professional IT & Network Solutions</title>
-    <meta name="description" content="G-Net Services offers expert networking, IT support, CCTV installation, printing, KRA PIN applications, and passport services in Nairobi, Kenya. Reliable, fast, and professional.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-Net Services | Professional IT & Network Solutions in Nairobi</title>
+    <meta name="description" content="G-Net Services offers expert networking, IT support, CCTV installation, printing, KRA PIN applications, and passport services in Nairobi, Kenya. Reliable, fast & professional.">
     <meta name="keywords" content="IT services Nairobi, network installation, CCTV, computer repair, KRA PIN, passport services, printing, G-Net Services">
     <meta name="author" content="G-Net Services">
     <meta name="theme-color" content="#667eea">
+    
     <!-- Open Graph / Social Media Preview -->
-    <meta property="og:title" content="G-Net Services | IT & Network Experts">
+    <meta property="og:title" content="G-Net Services | IT & Network Experts in Nairobi">
     <meta property="og:description" content="Professional networking, CCTV, computer repair & more. Contact us today!">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.gnetservices.co.ke">
-    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-<div class="container">
-    <header>
-        <h1>⚡ G-Net Services</h1>
-        <div class="tagline">Reliable IT, Networking & Digital Solutions — Nairobi</div>
+<div class="page-wrapper">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-network-wired"></i> G-Net Services
+            </div>
+            <div class="nav-links">
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#" class="nav-link cta-btn" id="navCTA">Get Quote</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Professional IT & Network Solutions</h1>
+                    <p class="hero-tagline">Trusted by 600+ businesses in Nairobi</p>
+                    <p class="hero-description">From network installations to CCTV systems, we deliver excellence with same-day response for urgent issues</p>
+                    <div class="hero-cta">
+                        <button class="btn btn-primary" id="heroWhatsApp">
+                            <i class="fab fa-whatsapp"></i> Get Started Now
+                        </button>
+                        <button class="btn btn-secondary" id="heroCall">
+                            <i class="fas fa-phone"></i> Call Us
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-placeholder">
+                        <i class="fas fa-server"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <h2>📡 Core Services</h2>
-        <div class="services-grid">
-            <div class="service-item" data-service="Network Installation">Network Installation</div>
-            <div class="service-item" data-service="CCTV Systems">CCTV Systems</div>
-            <div class="service-item" data-service="Computer Repair">Computer Repair</div>
-            <div class="service-item" data-service="IT Consulting">IT Consulting</div>
-            <div class="service-item" data-service="Printing Services">Printing Services</div>
-            <div class="service-item" data-service="Document Scanning">Document Scanning</div>
-            <div class="service-item" data-service="KRA PIN Application">KRA PIN Application</div>
-            <div class="service-item" data-service="Passport Services">Passport Services</div>
-        </div>
-
-        <div class="contact-section">
-            <h2>📞 Connect with us</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <strong>📞 Phone / Call</strong>
-                    <a href="tel:+254715061546" class="contact-link">+254 715 061 546</a>
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Services Section -->
+        <section class="services-section" id="services">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Services</h2>
+                    <p>Complete IT solutions tailored to your business needs</p>
                 </div>
-                <div class="contact-item">
-                    <strong>📧 Email</strong>
-                    <a href="mailto:info@gnetcyber26.co.ke" class="contact-link">info@gnetcyber26.co.ke</a>
+                <div class="services-grid">
+                    <div class="service-card" data-service="Network Installation">
+                        <div class="service-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3>Network Installation</h3>
+                        <p>Structured cabling, router setup, Wi-Fi optimization, and complete LAN/WAN installation</p>
+                        <span class="learn-more">Learn More →</span>
+                    </div>
+                    <div class="service-card" data-service="CCTV Systems">
+                        <div class="service-icon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h3>CCTV Systems</h3>
+                        <p>HD IP cameras, analog systems, remote monitoring & 24/7 recording solutions</p>
+                        <span class="learn-more">Learn More →</span>
+                    </div>
+                    <div class="service-card" data-service="Computer Repair">
+                        <div class="service-icon">
+                            <i class="fas fa-laptop-medical"></i>
+                        </div>
+                        <h3>Computer Repair</h3>
+                        <p>Hardware diagnostics, virus removal, OS installation, data recovery & upgrades</p>
+                        <span class="learn-more">Learn More →</span>
+                    </div>
+                    <div class="service-card" data-service="IT Consulting">
+                        <div class="service-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>IT Consulting</h3>
+                        <p>Network audits, IT infrastructure design, cloud solutions & cybersecurity advisory</p>
+                        <span class="learn-more">Learn More →</span>
+                    </div>
+                    <div class="service-card" data-service="Printing Services">
+                        <div class="service-icon">
+                            <i class="fas fa-print"></i>
+                        </div>
+                        <h3>Printing Services</h3>
+                        <p>High-quality document printing, binding, laminating & bulk print jobs</p>
+                        <span class="learn-more">Learn More →</span>
+                    </div>
+                    <div class="service-card" data-service="Document Scanning">
+                        <div class="service-icon">
+                            <i class="fas fa-file-scanner"></i>
+                        </div>
+                        <h3>Document Scanning</h3>
+                        <p>Fast document digitization, OCR, archiving & secure data storage</p>
+                        <span class="learn-more">Learn More →</span>
+                    </div>
+                    <div class="service-card" data-service="KRA PIN Application">
+                        <div class="service-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3>KRA PIN Application</h3>
+                        <p>Assistance with KRA PIN registration, returns filing & tax compliance</p>
+                        <span class="learn-more">Learn More →</span>
+                    </div>
+                    <div class="service-card" data-service="Passport Services">
+                        <div class="service-icon">
+                            <i class="fas fa-passport"></i>
+                        </div>
+                        <h3>Passport Services</h3>
+                        <p>Guidance on passport application, appointment booking & document verification</p>
+                        <span class="learn-more">Learn More →</span>
+                    </div>
                 </div>
-                <div class="contact-item">
-                    <strong>💬 WhatsApp Business</strong>
-                    <a href="https://wa.me/254715061546?text=Hi%20G-Net%2C%20I%20need%20IT%20support%2FCCTV%20quote" target="_blank" class="contact-link">+254 715 061 546</a>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="portfolio-section" id="portfolio">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Recent Projects</h2>
+                    <p>Showcase of successful installations and client solutions</p>
                 </div>
-                <div class="contact-item">
-                    <strong>📍 Service Area</strong>
-                    Nairobi, Kenya & surrounding counties
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <i class="fas fa-network-wired fa-3x"></i>
+                        </div>
+                        <h4>Enterprise Network Setup</h4>
+                        <p>Implemented complete network infrastructure for tech startup with 100+ employees</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <i class="fas fa-camera fa-3x"></i>
+                        </div>
+                        <h4>CCTV Installation</h4>
+                        <p>16-camera HD monitoring system for retail business with remote access</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <i class="fas fa-laptop-medical fa-3x"></i>
+                        </div>
+                        <h4>Computer Lab Setup</h4>
+                        <p>20+ workstations configured and deployed for training center</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <i class="fas fa-print fa-3x"></i>
+                        </div>
+                        <h4>Print Room Solution</h4>
+                        <p>Multi-device printing infrastructure for corporate office</p>
+                    </div>
                 </div>
-                <div class="contact-item">
-                    <strong>🔍 Google Business</strong>
-                    <a href="#" id="googleProfileLink" class="contact-link">View on Google Maps ⭐</a>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-us-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Why Choose G-Net Services?</h2>
+                    <p>Excellence in every project</p>
                 </div>
-                <div class="contact-item">
-                    <strong>👍 Facebook Page</strong>
-                    <a href="#" id="facebookPageLink" class="contact-link">G-Net Services KE</a>
+                <div class="features-grid">
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h4>24/7 Support</h4>
+                        <p>Round-the-clock technical assistance for urgent issues and emergencies</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h4>Same-Day Response</h4>
+                        <p>Fast emergency dispatch and rapid problem resolution for critical situations</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h4>Expert Team</h4>
+                        <p>Certified technicians with 10+ years experience in IT and networking</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Secure Solutions</h4>
+                        <p>Enterprise-grade security and data protection for your peace of mind</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Google Business Profile Enhanced -->
-        <div class="google-section">
-            <h2>📍 Find us on Google Maps</h2>
-            <div class="google-info">
-                <p>⭐ <strong>5-star rated service</strong> — Read customer reviews, get directions, and explore our portfolio.</p>
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Get in Touch</h2>
+                    <p>We're ready to help with your IT needs</p>
+                </div>
+                <div class="contact-wrapper">
+                    <div class="contact-grid">
+                        <div class="contact-card">
+                            <i class="fas fa-phone fa-2x"></i>
+                            <h4>Phone</h4>
+                            <a href="tel:+254715061546" class="contact-link">+254 715 061 546</a>
+                            <p>Mon-Fri, 8am-6pm</p>
+                        </div>
+                        <div class="contact-card">
+                            <i class="fab fa-whatsapp fa-2x"></i>
+                            <h4>WhatsApp</h4>
+                            <a href="#" id="contactWhatsApp" class="contact-link">Send Message</a>
+                            <p>Instant replies 24/7</p>
+                        </div>
+                        <div class="contact-card">
+                            <i class="fas fa-envelope fa-2x"></i>
+                            <h4>Email</h4>
+                            <a href="mailto:info@gnetcyber26.co.ke" class="contact-link">info@gnetcyber26.co.ke</a>
+                            <p>Response within 2 hours</p>
+                        </div>
+                        <div class="contact-card">
+                            <i class="fas fa-map-marker-alt fa-2x"></i>
+                            <h4>Location</h4>
+                            <p>Nairobi, Kenya</p>
+                            <p>Serving surrounding counties</p>
+                        </div>
+                    </div>
+                    <div class="contact-form-wrapper">
+                        <form class="contact-form" id="contactForm">
+                            <input type="text" placeholder="Your Name" required>
+                            <input type="email" placeholder="Your Email" required>
+                            <input type="tel" placeholder="Your Phone">
+                            <textarea placeholder="Tell us about your project..." rows="5" required></textarea>
+                            <button type="submit" class="btn btn-primary">Send Inquiry</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <button class="google-button" id="openGoogleBtn">🗺️ Open Google Profile</button>
-            <div class="google-steps">
-                <h3 style="margin-bottom: 12px; color: #ffebc2;">How to find G-Net on Google:</h3>
-                <ol>
-                    <li><strong>Search:</strong> "G-Net Services Nairobi" on Google Search or Maps</li>
-                    <li><strong>Claimed Profile:</strong> Click on our verified business listing</li>
-                    <li><strong>Read reviews:</strong> See customer feedback about IT & CCTV installations</li>
-                    <li><strong>Get directions:</strong> Tap the navigation button for real-time route</li>
-                    <li><strong>Quick actions:</strong> Call or send a message from the business card</li>
-                </ol>
-            </div>
-            <div class="url-copy">
-                🔗 <strong>Business shortcut:</strong> <span>https://g.page/gnetservices-nairobi</span>
-            </div>
-        </div>
+        </section>
 
-        <!-- WhatsApp Dedicated Section -->
-        <div class="google-section whatsapp-section">
-            <h2>💬 WhatsApp Instant Support</h2>
-            <div class="google-info">
-                <p>Get fast answers, price estimates, or schedule a technician within minutes.</p>
+        <!-- Social Links Section -->
+        <section class="social-section">
+            <div class="container">
+                <h3>Follow Us & Stay Updated</h3>
+                <div class="social-icons">
+                    <a href="https://wa.me/254715061546" class="social-icon whatsapp" title="WhatsApp" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.facebook.com/people/G-Net-Services/100064382197214/" class="social-icon facebook" title="Facebook" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/gnetservices_ke/" class="social-icon instagram" title="Instagram" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/gnetservices_ke" class="social-icon twitter" title="Twitter" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
             </div>
-            <div class="whatsapp-number">
-                <a href="#" id="whatsappNumberLink">📲 +254 715 061 546</a>
-            </div>
-            <button class="google-button" id="sendWhatsAppBtn">💚 Send WhatsApp Message Now</button>
-            <div class="google-steps">
-                <h3 style="color:#fff3cf;">Why WhatsApp?</h3>
-                <ol>
-                    <li>✅ Immediate replies during business hours (Mon-Fri, 8am-6pm)</li>
-                    <li>✅ Share photos for remote diagnostics (CCTV, PC issues)</li>
-                    <li>✅ Get quick quotes & document submissions (KRA PIN, passport forms)</li>
-                    <li>✅ Book appointments for on-site installations</li>
-                </ol>
-            </div>
-        </div>
-
-        <!-- Facebook Engagement -->
-        <div class="google-section facebook-section">
-            <h2>👍 Like & Follow on Facebook</h2>
-            <div class="google-info">
-                <p>Stay updated with tech tips, exclusive discounts, and community news.</p>
-            </div>
-            <button class="google-button" id="visitFacebookBtn">📘 Visit Facebook Page</button>
-            <div class="google-steps">
-                <h3>📢 What you get by following us:</h3>
-                <ol>
-                    <li>🎁 Special monthly promotions on CCTV & networking gear</li>
-                    <li>📱 Live tech Q&A sessions</li>
-                    <li>⭐ Real customer success stories</li>
-                    <li>📅 Announcements for digital literacy workshops</li>
-                </ol>
-            </div>
-        </div>
-
-        <!-- Social & Quick Links -->
-        <div class="quick-links-section">
-            <h3>🌐 Connect on your favorite platform</h3>
-            <p style="margin-bottom: 10px;">One tap away — we're ready to serve you.</p>
-            <div class="social-links">
-                <button class="social-btn whatsapp" id="whatsappBtn" title="WhatsApp">💬</button>
-                <button class="social-btn phone" id="callBtn" title="Call now">📞</button>
-                <button class="social-btn email" id="emailBtn" title="Send email">✉️</button>
-                <button class="social-btn facebook" id="facebookBtn" title="Facebook">f</button>
-                <button class="social-btn twitter" id="twitterBtn" title="Twitter (X)">🐦</button>
-                <button class="social-btn instagram" id="instagramBtn" title="Instagram">📸</button>
-            </div>
-            <div class="emergency-note">
-                💡 <strong>Emergency IT support?</strong> Call +254 715 061 546 — fast dispatch
-            </div>
-        </div>
-
-        <!-- Business confidence -->
-        <div class="trust-badge">
-            <p>✨ <strong>Trusted by businesses & individuals</strong> — Over 600+ successful installations | Same-day response for urgent network issues ✨</p>
-        </div>
+        </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 G-Net Services — All Rights Reserved. <br>📍 Nairobi, Kenya | Professional Networking, CCTV & IT Solutions</p>
-        <p style="margin-top: 8px; font-size: 0.8rem;">📧 info@gnetcyber26.co.ke | 📞 +254 715 061 546</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h5>G-Net Services</h5>
+                    <p>Professional IT and Network Services for businesses across Kenya. Delivering quality solutions with excellence and reliability.</p>
+                </div>
+                <div class="footer-section">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Contact Info</h5>
+                    <p>📞 +254 715 061 546</p>
+                    <p>📧 info@gnetcyber26.co.ke</p>
+                    <p>📍 Nairobi, Kenya</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 G-Net Services — All Rights Reserved | Professional Networking, CCTV & IT Solutions</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- Service Detail Modal -->
+    <div class="modal" id="serviceModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDescription"></p>
+                <button class="btn btn-primary" id="modalCTA">Get Quote Now</button>
+            </div>
+        </div>
+    </div>
 </div>
 
-<script src="js/main.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
