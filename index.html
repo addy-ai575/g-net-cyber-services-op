@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>G-Net Services | Professional IT & Network Solutions in Nairobi</title>
-    <meta name="description" content="G-Net Services offers expert networking, IT support, CCTV installation, printing, KRA PIN applications, and passport services in Nairobi, Kenya. Reliable, fast & professional.">
+    <meta name="description" content="G-Net Services - Expert IT, networking, CCTV, computer repair & more in Nairobi. Trusted by 600+ businesses. Same-day response. Free consultation.">
     <meta name="keywords" content="IT services Nairobi, network installation, CCTV, computer repair, KRA PIN, passport services, printing, G-Net Services">
     <meta name="author" content="G-Net Services">
     <meta name="theme-color" content="#667eea">
     
     <!-- Open Graph / Social Media Preview -->
     <meta property="og:title" content="G-Net Services | IT & Network Experts in Nairobi">
-    <meta property="og:description" content="Professional networking, CCTV, computer repair & more. Contact us today!">
+    <meta property="og:description" content="Professional networking, CCTV, computer repair & IT solutions. Trusted by 600+ businesses. Same-day response guaranteed!">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.gnetservices.co.ke">
+    <meta property="og:url" content="https://addy-ai575.github.io/g-net-cyber-services-op/">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630?text=G-Net+Services">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="G-Net Services | Professional IT Solutions">
+    <meta name="twitter:description" content="Expert IT and networking services in Nairobi. 600+ satisfied clients. Same-day response.">
+    <meta name="twitter:image" content="https://via.placeholder.com/1200x630?text=G-Net+Services">
     
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -28,7 +35,8 @@
             </div>
             <div class="nav-links">
                 <a href="#services" class="nav-link">Services</a>
-                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#testimonials" class="nav-link">Testimonials</a>
+                <a href="#blog" class="nav-link">Blog</a>
                 <a href="#contact" class="nav-link">Contact</a>
                 <a href="#" class="nav-link cta-btn" id="navCTA">Get Quote</a>
             </div>
@@ -55,6 +63,24 @@
                         </button>
                         <button class="btn btn-secondary" id="heroCall">
                             <i class="fas fa-phone"></i> Call Us
+                        </button>
+                    </div>
+                    <div class="share-buttons">
+                        <p>Share with your network:</p>
+                        <button class="share-btn" id="shareWhatsApp" title="Share on WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </button>
+                        <button class="share-btn" id="shareFacebook" title="Share on Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </button>
+                        <button class="share-btn" id="shareTwitter" title="Share on Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </button>
+                        <button class="share-btn" id="shareEmail" title="Share via Email">
+                            <i class="fas fa-envelope"></i>
+                        </button>
+                        <button class="share-btn" id="copyLink" title="Copy Link">
+                            <i class="fas fa-link"></i>
                         </button>
                     </div>
                 </div>
@@ -145,82 +171,149 @@
             </div>
         </section>
 
-        <!-- Portfolio Section -->
-        <section class="portfolio-section" id="portfolio">
+        <!-- Testimonials Section -->
+        <section class="testimonials-section" id="testimonials">
             <div class="container">
                 <div class="section-header">
-                    <h2>Recent Projects</h2>
-                    <p>Showcase of successful installations and client solutions</p>
+                    <h2>What Our Clients Say</h2>
+                    <p>Real feedback from satisfied businesses and individuals</p>
                 </div>
-                <div class="portfolio-grid">
-                    <div class="portfolio-item">
-                        <div class="portfolio-image">
-                            <i class="fas fa-network-wired fa-3x"></i>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
                         </div>
-                        <h4>Enterprise Network Setup</h4>
-                        <p>Implemented complete network infrastructure for tech startup with 100+ employees</p>
+                        <p class="testimonial-text">"G-Net Services transformed our IT infrastructure. The team was professional, fast, and incredibly knowledgeable. Highly recommended!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">JK</div>
+                            <div class="author-info">
+                                <h5>John Kariuki</h5>
+                                <p>Tech Startup CEO</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="portfolio-item">
-                        <div class="portfolio-image">
-                            <i class="fas fa-camera fa-3x"></i>
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
                         </div>
-                        <h4>CCTV Installation</h4>
-                        <p>16-camera HD monitoring system for retail business with remote access</p>
+                        <p class="testimonial-text">"The CCTV system installation was seamless and the support team is always available. Best decision for our retail business!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AM</div>
+                            <div class="author-info">
+                                <h5>Amina Mohamed</h5>
+                                <p>Retail Store Manager</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="portfolio-item">
-                        <div class="portfolio-image">
-                            <i class="fas fa-laptop-medical fa-3x"></i>
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
                         </div>
-                        <h4>Computer Lab Setup</h4>
-                        <p>20+ workstations configured and deployed for training center</p>
+                        <p class="testimonial-text">"Quick response time, professional service, and affordable pricing. G-Net Services is our go-to IT partner for everything!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">PW</div>
+                            <div class="author-info">
+                                <h5>Peter Wanjiru</h5>
+                                <p>Business Owner</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="portfolio-item">
-                        <div class="portfolio-image">
-                            <i class="fas fa-print fa-3x"></i>
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
                         </div>
-                        <h4>Print Room Solution</h4>
-                        <p>Multi-device printing infrastructure for corporate office</p>
+                        <p class="testimonial-text">"Fixed my computer in record time! The technician was friendly and explained everything clearly. Excellent service!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SM</div>
+                            <div class="author-info">
+                                <h5>Sarah Mwangi</h5>
+                                <p>Freelancer</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Why Choose Us Section -->
-        <section class="why-us-section">
+        <!-- Blog Section -->
+        <section class="blog-section" id="blog">
             <div class="container">
                 <div class="section-header">
-                    <h2>Why Choose G-Net Services?</h2>
-                    <p>Excellence in every project</p>
+                    <h2>Latest Blog Posts</h2>
+                    <p>Tips, insights, and updates on IT and networking</p>
                 </div>
-                <div class="features-grid">
-                    <div class="feature">
-                        <div class="feature-icon">
-                            <i class="fas fa-headset"></i>
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <i class="fas fa-shield-alt fa-3x"></i>
+                            <span class="blog-category">Security</span>
                         </div>
-                        <h4>24/7 Support</h4>
-                        <p>Round-the-clock technical assistance for urgent issues and emergencies</p>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">
-                            <i class="fas fa-bolt"></i>
+                        <h3>5 Essential Cybersecurity Tips for Small Businesses</h3>
+                        <p class="blog-excerpt">Protect your business from cyber threats with these essential security practices that every business should implement today.</p>
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="far fa-calendar"></i> June 10, 2024</span>
+                            <span class="blog-read"><i class="far fa-clock"></i> 5 min read</span>
                         </div>
-                        <h4>Same-Day Response</h4>
-                        <p>Fast emergency dispatch and rapid problem resolution for critical situations</p>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">
-                            <i class="fas fa-award"></i>
+                        <button class="read-more">Read More →</button>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <i class="fas fa-network-wired fa-3x"></i>
+                            <span class="blog-category">Networking</span>
                         </div>
-                        <h4>Expert Team</h4>
-                        <p>Certified technicians with 10+ years experience in IT and networking</p>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">
-                            <i class="fas fa-shield-alt"></i>
+                        <h3>How to Choose the Right Network Setup for Your Office</h3>
+                        <p class="blog-excerpt">A comprehensive guide to selecting the perfect network infrastructure that matches your business needs and budget requirements.</p>
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="far fa-calendar"></i> June 5, 2024</span>
+                            <span class="blog-read"><i class="far fa-clock"></i> 7 min read</span>
                         </div>
-                        <h4>Secure Solutions</h4>
-                        <p>Enterprise-grade security and data protection for your peace of mind</p>
-                    </div>
+                        <button class="read-more">Read More →</button>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <i class="fas fa-camera fa-3x"></i>
+                            <span class="blog-category">CCTV</span>
+                        </div>
+                        <h3>Benefits of Modern CCTV Systems for Your Business</h3>
+                        <p class="blog-excerpt">Discover how advanced CCTV technology can improve security, reduce losses, and provide peace of mind for your facility.</p>
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="far fa-calendar"></i> May 28, 2024</span>
+                            <span class="blog-read"><i class="far fa-clock"></i> 4 min read</span>
+                        </div>
+                        <button class="read-more">Read More →</button>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <i class="fas fa-laptop fa-3x"></i>
+                            <span class="blog-category">Maintenance</span>
+                        </div>
+                        <h3>Computer Maintenance: Keep Your Systems Running Smoothly</h3>
+                        <p class="blog-excerpt">Learn the best practices for maintaining your computers and IT equipment to ensure optimal performance and longevity.</p>
+                        <div class="blog-meta">
+                            <span class="blog-date"><i class="far fa-calendar"></i> May 20, 2024</span>
+                            <span class="blog-read"><i class="far fa-clock"></i> 6 min read</span>
+                        </div>
+                        <button class="read-more">Read More →</button>
+                    </article>
                 </div>
             </div>
         </section>
@@ -306,7 +399,8 @@
                     <h5>Quick Links</h5>
                     <ul>
                         <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#blog">Blog</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -319,6 +413,7 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 G-Net Services — All Rights Reserved | Professional Networking, CCTV & IT Solutions</p>
+                <p style="font-size: 0.85rem; margin-top: 10px;">🌐 Website: <strong>https://addy-ai575.github.io/g-net-cyber-services-op/</strong></p>
             </div>
         </div>
     </footer>
