@@ -2,7 +2,9 @@
 const config = {
     phoneNumber: '254715061546',
     emailAddress: 'info@gnetcyber26.co.ke',
-    whatsappMessage: 'Hello G-Net Services, I am interested in your services. Could you assist me?'
+    whatsappMessage: 'Hello G-Net Services, I am interested in your services. Could you assist me?',
+    siteUrl: 'https://addy-ai575.github.io/g-net-cyber-services-op/',
+    siteTitle: 'G-Net Services - Professional IT & Network Solutions in Nairobi'
 };
 
 // ============ Service Details ============
@@ -31,6 +33,46 @@ function scrollToSection(sectionId) {
 
 function openLink(url) {
     window.open(url, '_blank', 'noopener,noreferrer');
+}
+
+// ============ Sharing Functions ============
+function shareOnWhatsApp() {
+    const message = `Check out G-Net Services - Professional IT & Network Solutions! ${config.siteUrl}`;
+    const url = `https://wa.me/?text=${encodeWhatsAppMessage(message)}`;
+    openLink(url);
+}
+
+function shareOnFacebook() {
+    const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(config.siteUrl)}`;
+    openLink(url);
+}
+
+function shareOnTwitter() {
+    const text = `Check out @GNetServices - Professional IT & Network Solutions in Nairobi! Trusted by 600+ businesses. #ITServices #Networking`;
+    const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(config.siteUrl)}`;
+    openLink(url);
+}
+
+function shareViaEmail() {
+    const subject = 'G-Net Services - Professional IT Solutions';
+    const body = `Check out G-Net Services - Professional IT & Network Solutions in Nairobi. Trusted by 600+ businesses.\n\n${config.siteUrl}`;
+    window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
+function copyLinkToClipboard() {
+    navigator.clipboard.writeText(config.siteUrl).then(() => {
+        const btn = document.getElementById('copyLink');
+        const originalHTML = btn.innerHTML;
+        btn.innerHTML = '<i class="fas fa-check"></i>';
+        btn.style.background = '#25D366';
+        
+        setTimeout(() => {
+            btn.innerHTML = originalHTML;
+            btn.style.background = '';
+        }, 2000);
+    }).catch(() => {
+        alert('Failed to copy link. Please try again.');
+    });
 }
 
 // ============ Communication Functions ============
@@ -91,6 +133,21 @@ function bindServiceCards() {
             }
         });
     });
+}
+
+// ============ Event Listeners - Sharing Buttons ============
+function bindShareButtons() {
+    const shareWhatsApp = document.getElementById('shareWhatsApp');
+    const shareFacebook = document.getElementById('shareFacebook');
+    const shareTwitter = document.getElementById('shareTwitter');
+    const shareEmail = document.getElementById('shareEmail');
+    const copyLink = document.getElementById('copyLink');
+    
+    if (shareWhatsApp) shareWhatsApp.addEventListener('click', shareOnWhatsApp);
+    if (shareFacebook) shareFacebook.addEventListener('click', shareOnFacebook);
+    if (shareTwitter) shareTwitter.addEventListener('click', shareOnTwitter);
+    if (shareEmail) shareEmail.addEventListener('click', shareViaEmail);
+    if (copyLink) copyLink.addEventListener('click', copyLinkToClipboard);
 }
 
 // ============ Event Listeners - Hero CTA ============
@@ -224,9 +281,9 @@ function bindScrollAnimations() {
         });
     }, observerOptions);
     
-    // Observe service cards, portfolio items, and features
+    // Observe service cards, portfolio items, testimonials, and features
     const elements = document.querySelectorAll(
-        '.service-card, .portfolio-item, .feature, .contact-card'
+        '.service-card, .portfolio-item, .feature, .contact-card, .testimonial-card, .blog-card'
     );
     elements.forEach(el => observer.observe(el));
 }
@@ -291,12 +348,23 @@ function bindScrollToTop() {
     });
 }
 
+// ============ Blog Read More Handlers ============
+function bindBlogButtons() {
+    const readMoreButtons = document.querySelectorAll('.read-more');
+    readMoreButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            alert('Full blog post coming soon! For now, reach out to us at +254 715 061 546 for more information.');
+        });
+    });
+}
+
 // ============ Main Initialization ============
 function init() {
     console.log('🚀 G-Net Services website initialized');
     
     // Bind all event listeners
     bindServiceCards();
+    bindShareButtons();
     bindHeroCTA();
     bindContactButtons();
     bindContactForm();
@@ -306,6 +374,7 @@ function init() {
     bindScrollAnimations();
     bindNavbarScroll();
     bindScrollToTop();
+    bindBlogButtons();
     
     // Make service cards keyboard accessible
     const serviceCards = document.querySelectorAll('.service-card');
@@ -313,6 +382,10 @@ function init() {
         card.setAttribute('tabindex', '0');
         card.setAttribute('role', 'button');
     });
+    
+    // Log sharing functionality loaded
+    console.log('✅ Sharing functionality enabled');
+    console.log('✅ Website URL:', config.siteUrl);
 }
 
 // ============ Run on DOM Ready ============
